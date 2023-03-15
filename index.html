@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        background: #141519;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .space {
+        width: 150px;
+        height: 50px;
+        background: #363636;
+        border-radius: 30px;
+      }
+
+      .circle {
+        width: 50px;
+        height: 50px;
+        background: #dddddd;
+        border-radius: 50%;
+      }
+
+      .active {
+        margin-left: auto;
+      }
+
+      .activespace {
+        background: #3172f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space">
+      <div class="circle"></div>
+    </div>
+
+    <script>
+      var circle = document.querySelector(".circle");
+      var space = document.querySelector(".space");
+
+      circle.onclick = () => {
+        circle.classList.toggle("active");
+        space.classList.toggle("activespace");
+      };
+    </script>
+  </body>
+</html>
